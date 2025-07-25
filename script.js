@@ -139,7 +139,7 @@ document.getElementById('mobile-redirect').onclick = function() {
 function isBlockedMobile() {
     // Blokuje: telefony, tablety, małe okna (w tym "wersja na komputer" na telefonie)
     const isMobileUA = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    const isSmallScreen = window.innerWidth < 1000;
+    const isSmallScreen = window.innerWidth < 1300;
     return isMobileUA || isSmallScreen;
 }
 
