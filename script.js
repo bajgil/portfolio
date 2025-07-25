@@ -127,7 +127,7 @@ normalBtn.addEventListener('click', () => {
 
 // Blokada na telefonie
 function isMobile() {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Safari/i.test(navigator.userAgent);
 }
 if(isMobile()) {
     document.getElementById('mobile-block').style.display = 'flex';
@@ -139,7 +139,7 @@ document.getElementById('mobile-redirect').onclick = function() {
 function isBlockedMobile() {
     // Blokuje: telefony, tablety, małe okna (w tym "wersja na komputer" na telefonie)
     const isMobileUA = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    const isSmallScreen = window.innerWidth < 1300;
+    const isSmallScreen = window.innerWidth < 1000;
     return isMobileUA || isSmallScreen;
 }
 
